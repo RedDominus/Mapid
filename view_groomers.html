@@ -2,16 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Groomer Reports</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
             background-color: #f4f4f4;
-        }
-        h2 {
-            color: #333;
+            margin: 20px;
         }
         .report {
             background-color: #fff;
@@ -26,23 +22,11 @@
 <body>
 
     <h2>Submitted Groomer Reports</h2>
-
     <div id="reports-container">
-        <!-- The reports will be fetched dynamically -->
+        <!-- Reports will be displayed here -->
     </div>
 
-    <script>
-        // Fetch the reports from view.php
-        fetch('view.php')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('reports-container').innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Error fetching reports:', error);
-                document.getElementById('reports-container').innerHTML = '<p>Error loading reports.</p>';
-            });
-    </script>
+    <script src="view.js"></script>
 
 </body>
 </html>
