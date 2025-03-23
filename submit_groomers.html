@@ -9,65 +9,50 @@
             background-color: #f4f4f4;
             margin: 20px;
         }
-        h2 {
-            color: #333;
-        }
-        form {
+        form, .view-button {
             background-color: #fff;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
         }
-        label {
+        label, input, textarea {
             display: block;
-            margin-top: 10px;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            margin: 10px 0;
         }
         input[type="submit"], .view-button {
             background-color: #007BFF;
             color: white;
             border: none;
             padding: 10px 15px;
-            margin-top: 10px;
             cursor: pointer;
             border-radius: 4px;
         }
         input[type="submit"]:hover, .view-button:hover {
             background-color: #0056b3;
         }
-        .view-button {
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
-    <h2>Submit Groomer Report</h2>
 
-    <form action="submit.php" method="POST">
+    <h2>Submit Groomer Report</h2>
+    <form>
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+        <input type="text" id="username" required>
 
         <label for="evidence">Evidence (Link or description):</label>
-        <input type="text" id="evidence" name="evidence" required>
+        <input type="text" id="evidence" required>
 
         <label for="details">What did they do?</label>
-        <textarea id="details" name="details" required></textarea>
+        <textarea id="details" required></textarea>
 
         <input type="submit" value="Submit Report">
     </form>
 
-    <!-- View Reports Button -->
+    <br>
     <a href="view_groomers.html" class="view-button">View Reports</a>
 
+    <script src="submit.js"></script>
+
 </body>
-          </html>
+</html>
